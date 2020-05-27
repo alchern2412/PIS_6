@@ -1,0 +1,28 @@
+﻿@model List<Models.Record>
+
+
+@foreach (Models.Record d in Model)
+{
+    <tr>
+        <td><p>@d.Id</p></td>
+        <td><p>@d.Name</p></td>
+        <td><p>@d.Number</p></td>
+        <td>
+            <a href="/Dict/Update?id=@d.Id&name=@d.Name&number=@d.Number">
+                <p>Update @d.Id</p>
+            </a>
+        </td>
+        <td>
+            <a href="/Dict/Delete?id=@d.Id">
+                <p>Delete @d.Id</p>
+            </a>
+        </td>
+    </tr>
+}
+
+
+
+@*<div>
+        Это текст из частичного представления.
+        @Html.ActionLink("Ссылка на метод действия Index", "Index")
+    </div>*@

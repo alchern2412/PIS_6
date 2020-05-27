@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add</h2>
+
+@*<form action="/Dict/AddSave" method="post">
+    <input type="text" name="name" placeholder="Name" />
+    <input type="text" name="number" placeholder="Number" />
+    <input type="submit" value="Add" />
+</form>*@
+
+@Helpers.AddUpdateForm("Add", 0, "", "")
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

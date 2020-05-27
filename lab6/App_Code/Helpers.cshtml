@@ -1,0 +1,11 @@
+﻿@helper AddUpdateForm(string method, int id = 0, string name = "Enter name", string number = "Enter number")
+{
+    var path = "/Dict/" + method + "Save";
+
+    <form action=@path method="post">
+        <input type="number" name="id" value=@id />
+        <input type="text" name="name" value=@name />
+        <input type="text" name="number" value=@number />
+        <input type="submit" value=@method />
+    </form>
+}
